@@ -1,13 +1,23 @@
-const TableRow = ({ currencies, text, value, handleChangeCurrency, name }) => {
+const TableRow = ({
+  currencies,
+  text,
+  value,
+  handleChangeCurrency,
+  handleChangeAmout,
+  name,
+  amount,
+  disabled,
+}) => {
   return (
     <tr>
       <td>{text} Currency:</td>
       <td>
         <input
+          disabled={disabled}
           type="number"
           name="currency-amount-2"
-          value={""}
-          onChange={""}
+          value={amount}
+          onChange={handleChangeAmout}
         />
       </td>
       <td>

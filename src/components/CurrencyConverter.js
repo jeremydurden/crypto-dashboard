@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import ExchangeRateDisplay from "./ExchangeRateDisplay";
 import TableRow from "./TableRow";
@@ -21,6 +21,10 @@ const CurrencyConverter = () => {
   const handleChangeAmount = (e) => {
     setAmount(e.target.value);
   };
+
+  useEffect(() => {
+    setResult(0);
+  }, [chosenSecondaryCurrency, chosenPrimaryCurrency]);
 
   const convert = () => {
     const options = {
@@ -59,7 +63,7 @@ const CurrencyConverter = () => {
 
   return (
     <div className="currency-converter">
-      <h2>Currency Converter</h2>
+      <h2 className="title--currency-converter">Crypto Converter</h2>
 
       <div className="input-box">
         <table>
@@ -84,11 +88,16 @@ const CurrencyConverter = () => {
             />
           </tbody>
         </table>
-        <button className="convert-button" onClick={convert}>
-          Convert
-        </button>
       </div>
-      <ExchangeRateDisplay />
+      <button className="convert-button" onClick={convert}>
+        Convert
+      </button>
+      <ExchangeRateDisplay
+        result={result}
+        chosenSecondaryCurrency={chosenSecondaryCurrency}
+        chosenPrimaryCurrency={chosenPrimaryCurrency}
+        exchangeRate={exchangeRate}
+      />
     </div>
   );
 };

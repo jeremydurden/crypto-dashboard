@@ -62,9 +62,10 @@ h3 {font-size: var(--fs-h3);}
 
 
 .app {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  
-  align-items: center;
+  justify-content: center;
 }
 
 .news-feed {
@@ -72,9 +73,27 @@ h3 {font-size: var(--fs-h3);}
 }
 
 .currency-converter {
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .exchange-rate {
-  background-color: green;
+  width: ;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.convert-button {
+  margin-top: 2rem;
+}
+
+title--currency-converter {
+  margin-bottom: 6rem;
+  background-color: red;
+}
+
+.exchange-rate {
+  text-align: center;
 }

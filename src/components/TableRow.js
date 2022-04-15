@@ -9,7 +9,7 @@ const TableRow = ({
   disabled,
 }) => {
   return (
-    <tr>
+    <tr className="table-row">
       <td>{text} Currency:</td>
       <td>
         <input

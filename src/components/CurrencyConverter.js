@@ -57,10 +57,6 @@ const CurrencyConverter = () => {
       });
   };
 
-  console.log(chosenPrimaryCurrency);
-  console.log(chosenSecondaryCurrency);
-  console.log("exchangeRate", exchangeRate);
-
   return (
     <div className="currency-converter">
       <h2 className="title--currency-converter">Crypto Converter</h2>

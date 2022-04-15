@@ -44,10 +44,7 @@ body {
     line-height: 1.6;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
+
 
 /* typography */
 
@@ -77,10 +74,10 @@ h3 {font-size: var(--fs-h3);}
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .exchange-rate {
-  width: ;
   display: flex;
   justify-content: flex-start;
 }
@@ -89,9 +86,9 @@ h3 {font-size: var(--fs-h3);}
   margin-top: 2rem;
 }
 
-title--currency-converter {
-  margin-bottom: 6rem;
-  background-color: red;
+.title--currency-converter {
+  margin-bottom: 2rem;
+  
 }
 
 .exchange-rate {

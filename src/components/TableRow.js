@@ -1,18 +1,24 @@
-const TableRow = ({ currencies, text }) => {
+const TableRow = ({ currencies, text, value, handleChangeCurrency, name }) => {
   return (
     <tr>
       <td>{text} Currency:</td>
       <td>
-        <input type="number" name="currency-amount-2" value={""} />
+        <input
+          type="number"
+          name="currency-amount-2"
+          value={""}
+          onChange={""}
+        />
       </td>
       <td>
         <select
-          value={""}
-          name="currency-option-2"
+          onChange={handleChangeCurrency}
+          value={value}
+          name={name}
           className="currency-options"
         >
-          {currencies.map((currency) => (
-            <option>{currency}</option>
+          {currencies.map((currency, _id) => (
+            <option key={_id}>{currency}</option>
           ))}
         </select>
       </td>
